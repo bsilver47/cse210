@@ -8,6 +8,6 @@ class Program
         string firstName = Console.ReadLine();
         Console.WriteLine("What is your last name?");
         string lastName = Console.ReadLine();
-        Console.WriteLine($"That means you are {lastName},{firstName} {lastName}");
+        Console.WriteLine($"That means you are {lastName}, {firstName} {lastName}");
     }
 }
