@@ -10,24 +10,39 @@ class Program
 
         if (gradePercentage >= 90)
         {
-            Console.WriteLine("Your letter grade is A.");
+            letterGrade = "A";
         }
         else if (gradePercentage >= 80)
         {
-            Console.WriteLine("Your letter grade is B.");
+            letterGrade = "B";
         }
         else if (gradePercentage >= 70)
         {
-            Console.WriteLine("Your letter grade is C.");
+            letterGrade = "C";
         }
         else if (gradePercentage >= 60)
         {
-            Console.WriteLine("Your letter grade is D.");
+            letterGrade = "D";
         }
         else
         {
-            Console.WriteLine("Your letter grade is F.");
+            letterGrade = "F";
         }
+
+        if (letterGrade != "F")
+        {
+            int lastDigit = gradePercentage % 10;
+            if (lastDigit >= 7 && letterGrade != "A")
+            {
+                letterGrade += "+";
+            }
+            else if (lastDigit < 3)
+            {
+                letterGrade += "-";
+            }
+        }
+
+        Console.WriteLine($"Your letter grade is {letterGrade}.");
 
         if (gradePercentage >= 70)
         {
@@ -37,6 +52,7 @@ class Program
         {
             Console.WriteLine("Unfortunately, you have not passed the course. Better luck next time!");
         }
+
     }
 }
 
