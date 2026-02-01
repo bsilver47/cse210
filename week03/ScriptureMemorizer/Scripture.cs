@@ -7,9 +7,9 @@ namespace ScriptureMemorizer
         private ReferenceEqualityComparer _reference;
         private List<WaitForChangedResult> _words;
 
-        public Scripture(string book, int chapter, int verse, string text)
+        public Scripture(string book, int chapter, int beginVerse, int endVerse, string text)
         {
-            _reference = new Reference(book, chapter, verse);
+            _reference = new Reference(book, chapter, beginVerse, endVerse);
             _words = new List<Word>(text.Split(' ').Select(word => new Word(word)));
         }
 
