@@ -1,6 +1,6 @@
 public class Prompt
 {
-    List<string> _prompts = new List<string>()
+    static List<string> _prompts = new List<string>()
     {
         "Who was the most interesting person I interacted with today?",
         "What was the best part of my day?",
@@ -16,10 +16,10 @@ public class Prompt
 
     // Random _random = Random.Shared;
     // int index = _random.Next(_prompts.Count);
-    
-    public string _prompt = Random.Shared.GetItems(_prompts.Count)[0];
 
-   
+    public string _prompt = _prompts[Random.Shared.Next(_prompts.Count)];
+
+
 
     public void DisplayEntry()
     {
