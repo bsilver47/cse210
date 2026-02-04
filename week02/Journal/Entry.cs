@@ -22,4 +22,13 @@ public class Entry
         Console.WriteLine("Passage:");
         Console.WriteLine(_passage);
     }
+
+    public void WriteToFile(string fileName)
+    {
+        string[] lines = File.ReadAllLines(fileName);
+        using (StreamWriter outputFile = new StreamWriter(fileName, true))
+        {
+            outputFile.WriteLine(_date.ToString("yyyy-MM-dd HH:mm:ss") + ", " + _prompt + ", " + _passage);
+        }
+    }
 }
