@@ -18,7 +18,7 @@ namespace ScriptureMemorizer
                     break;
                 }
 
-                int wordsToHide = int.TryParse(input, out int n) ? n : 0;
+                int wordsToHide = int.TryParse(input, out int n) ? n : 0; // in exceeding the project requirements, please add a number to your input to hide more words than the usual "enter"
                 for (int i = 0; i < wordsToHide; i++)
                 {
                     if (!scripture.HideRandomWord())
