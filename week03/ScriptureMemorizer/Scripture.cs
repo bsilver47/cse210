@@ -4,13 +4,13 @@ namespace ScriptureMemorizer
 {
     class Scripture
     {
-        private ReferenceEqualityComparer _reference;
-        private List<WaitForChangedResult> _words;
+        private Reference _reference;
+        private List<Word> _words;
 
         public Scripture(string book, int chapter, int beginVerse, int endVerse, string text)
         {
             _reference = new Reference(book, chapter, beginVerse, endVerse);
-            _words = new List<Word>(text.Split(' ').Select(word => new Word(word)));
+            _words = new List<Word>(text.Split(' ').Select(static word => new Word(word)));
         }
 
         public void Display()

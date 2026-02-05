@@ -11,11 +11,21 @@ namespace ScriptureMemorizer
             {
                 Console.Clear();
                 scripture.Display();
-                Console.WriteLine("\nPress Enter to hide a word or type 'quit' to exit:");
+                Console.WriteLine("\nPress Enter or type a number to hide a set number of words or type 'quit' to exit:");
                 string input = Console.ReadLine();
                 if (input.ToLower() == "quit")
                 {
                     break;
+                }
+
+                int wordsToHide = int.TryParse(input, out int n) ? n : 0;
+                for (int i = 0; i < wordsToHide; i++)
+                {
+                    if (!scripture.HideRandomWord())
+                    {
+                        Console.WriteLine("All words are hidden. Exiting.");
+                        return;
+                    }
                 }
 
                 if (!scripture.HideRandomWord())

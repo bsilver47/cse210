@@ -28,5 +28,10 @@ namespace ScriptureMemorizer
                 return $"{_book} {_chapter}:{_beginVerse}-{_endVerse}";
             }
         }
+
+        public static implicit operator ReferenceEqualityComparer(Reference v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
