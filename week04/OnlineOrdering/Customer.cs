@@ -8,7 +8,7 @@ namespace OnlineOrdering
         public Address Address { get; set; }
         public override string ToString()
         {
-            return $"Customer Name: {Name}, Price: ${Price}";
+            return $"Customer Name: {Name}, Address: {Address}";
         }
         public bool IsUSAddress()
         {

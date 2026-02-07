@@ -7,10 +7,10 @@ namespace OnlineOrdering
     {
         public int Id { get; set; }
         public Customer Customer { get; set; }
-        public decimal ShippingCost { get; }
+        public decimal ShippingCost { get; private set; }
         public DateTime OrderDate { get; set; }
         public List<Product> Products { get; set; }
-        public decimal TotalPrice { get; }
+        public decimal TotalPrice { get; private set; }
 
         public override string ToString()
         {
