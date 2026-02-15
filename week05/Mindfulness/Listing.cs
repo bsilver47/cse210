@@ -9,7 +9,11 @@ namespace Mindfulness
         {
             base.DisplayStartMessage();
             Console.WriteLine(_prompt);
-            Console.WriteLine("Start listing now...");
+            Console.WriteLine("Get ready...");
+            Thread.Sleep(1000);
+            Console.WriteLine("Set...");
+            Thread.Sleep(1000);
+            Console.WriteLine("Go!");
             Thread.Sleep(_duration * 1000);
         }
     }
