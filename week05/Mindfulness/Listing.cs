@@ -5,9 +5,9 @@ namespace Mindfulness
     class Listing : Activity
     {
         protected string _prompt = new ListingLists()._prompt;
-        public Listing() : base("Listing Activity", "This activity will help you reflect on positive aspects of your life by listing things you are grateful for.", 0) { }
+        public Listing(int duration) : base("Listing Activity", "This activity will help you reflect on positive aspects of your life by listing things you are grateful for.", duration) { }
 
-        public void Prompt()
+        public void Prompt(int duration)
         {
             List<string> entries = new List<string>();
             Stopwatch stopwatch = new Stopwatch();
@@ -19,7 +19,7 @@ namespace Mindfulness
             Thread.Sleep(1000);
             Console.WriteLine("Go!");
             stopwatch.Start();
-            while (stopwatch.Elapsed.TotalSeconds < _duration)
+            while (stopwatch.Elapsed.TotalSeconds < duration)
             {
                 Console.Write("> ");
                 string entry = Console.ReadLine();

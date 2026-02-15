@@ -5,16 +5,16 @@ namespace Mindfulness
 {
     class BreathingExercise : Activity
     {
-        public BreathingExercise() : base("Breathing Exercise", "This activity will help you focus on your breath and relax your mind.", 0) { }
+        public BreathingExercise(int duration) : base("Breathing Exercise", "This activity will help you focus on your breath and relax your mind.", duration) { }
 
-        public void Prompt()
+        public void Prompt(int duration)
         {
             base.DisplayStartMessage();
             Stopwatch stopwatch = new Stopwatch();
             Console.WriteLine("Starting...");
             stopwatch.Start();
             Console.WriteLine("Now!");
-            while (stopwatch.Elapsed.TotalSeconds < _duration)
+            while (stopwatch.Elapsed.TotalSeconds < duration)
             {
                 Console.WriteLine("Hold your breath for 4 seconds...");
                 Thread.Sleep(4000);
