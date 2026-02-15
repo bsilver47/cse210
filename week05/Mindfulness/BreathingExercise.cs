@@ -4,9 +4,9 @@ namespace Mindfulness
 {
     class BreathingExercise : Activity
     {
-        public BreathingExercise(int duration) : base("Breathing Exercise", "This activity will help you focus on your breath and relax your mind.", duration) { }
+        public BreathingExercise() : base("Breathing Exercise", "This activity will help you focus on your breath and relax your mind.", 0) { }
 
-        protected override void Prompt()
+        protected void Prompt()
         {
             base.DisplayStartMessage();
             Console.WriteLine("Inhale deeply through your nose for 4 seconds...");

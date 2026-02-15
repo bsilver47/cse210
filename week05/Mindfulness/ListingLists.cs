@@ -1,4 +1,5 @@
-public class Prompt
+namespace Mindfulness;
+public class ListingLists
 {
     static List<string> _prompts = new List<string>()
     {
@@ -6,20 +7,19 @@ public class Prompt
         "What were the best parts of my day?",
         "In what ways did I see the hand of the Lord in my life today?",
         "What were the moments I felt strong emotions today?",
-        "If I had one thing I could do over today, what would it be; and how can I implement that in my day tomorrow?",
-        "What am I grateful for today?",
-        "What is a goal I have for tomorrow?",
-        "Who had a positive impact on my life today?",
-        "What is something new I learned today?",
-        "Who do I want to reach out to tomorrow?",
+        "What are some things I am looking forward to implementing in my day tomorrow?",
+        "What are some things I am grateful for today?",
+        "What are some goals I have for tomorrow?",
+        "Who are people that had a positive impact on my life today?",
+        "What have I learned today?",
+        "Who do I want to reach out to and express appreciation for tomorrow?",
+        "What are some of my personal strengths?",
+        "Who have I helped this week?",
+        "When have I felt the Holy Ghost this week?",
+        "Who are some of my heroes?",
     };
 
-    // Random _random = Random.Shared;
-    // int index = _random.Next(_prompts.Count);
-
     public string _prompt = _prompts[Random.Shared.Next(_prompts.Count)];
-
-
 
     public void DisplayEntry()
     {

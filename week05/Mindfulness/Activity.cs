@@ -29,7 +29,7 @@ namespace Mindfulness
         {
             Console.WriteLine("Well done! You have completed the activity.");
             Console.WriteLine($"You spent {_duration} seconds on this activity.");
-            Console.WriteLine("Take a moment to reflect on how you felt during the activity.");
+            Console.WriteLine("Please take a moment to reflect on how you felt during the activity and come again soon!");
             Console.WriteLine();
             Thread.Sleep(3000);
         }
