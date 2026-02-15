@@ -23,6 +23,7 @@ namespace Mindfulness
                 Console.WriteLine(i);
                 Thread.Sleep(1000);
             }
+            base.DisplayEndMessage();
         }
     }
 }

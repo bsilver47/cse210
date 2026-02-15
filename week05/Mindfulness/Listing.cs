@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace Mindfulness
 {
     class Listing : Activity
@@ -7,6 +9,8 @@ namespace Mindfulness
 
         protected void Prompt()
         {
+            List<string> entries = new List<string>();
+            Stopwatch stopwatch = new Stopwatch();
             base.DisplayStartMessage();
             Console.WriteLine(_prompt);
             Console.WriteLine("Get ready...");
@@ -14,7 +18,16 @@ namespace Mindfulness
             Console.WriteLine("Set...");
             Thread.Sleep(1000);
             Console.WriteLine("Go!");
-            Thread.Sleep(_duration * 1000);
+            stopwatch.Start();
+            while (stopwatch.Elapsed.TotalSeconds < _duration)
+            {
+                Console.Write("> ");
+                string entry = Console.ReadLine();
+                entries.Add(entry);
+            }
+            stopwatch.Stop();
+            Console.WriteLine($"You listed {entries.Count} items!");
+            base.DisplayEndMessage();
         }
     }
 }
