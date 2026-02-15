@@ -7,7 +7,7 @@ namespace Mindfulness
     {
         public BreathingExercise() : base("Breathing Exercise", "This activity will help you focus on your breath and relax your mind.", 0) { }
 
-        protected void Prompt()
+        public void Prompt()
         {
             base.DisplayStartMessage();
             Stopwatch stopwatch = new Stopwatch();

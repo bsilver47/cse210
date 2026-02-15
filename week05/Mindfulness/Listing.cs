@@ -7,7 +7,7 @@ namespace Mindfulness
         protected string _prompt = new ListingLists()._prompt;
         public Listing() : base("Listing Activity", "This activity will help you reflect on positive aspects of your life by listing things you are grateful for.", 0) { }
 
-        protected void Prompt()
+        public void Prompt()
         {
             List<string> entries = new List<string>();
             Stopwatch stopwatch = new Stopwatch();

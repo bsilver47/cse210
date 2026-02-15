@@ -9,8 +9,8 @@ namespace Mindfulness
             Console.WriteLine("Welcome to the Mindfulness App!");
             Console.WriteLine("Please select an activity:");
             Console.WriteLine("1. Breathing Exercise");
-            Console.WriteLine("2. Body Scan");
-            Console.WriteLine("3. Guided Meditation");
+            Console.WriteLine("2. Reflection");
+            Console.WriteLine("3. Listing");
             Console.Write("Enter the number of your choice: ");
             string choice = Console.ReadLine();
 
@@ -18,13 +18,19 @@ namespace Mindfulness
             switch (choice)
             {
                 case "1":
-                    activity = new BreathingExercise();
+                    // activity = new BreathingExercise();
+                    // activity.Prompt();
+                    BreathingExercise breathingExercise = new BreathingExercise();
+                    breathingExercise.Prompt();
                     break;
                 case "2":
                     activity = new Reflection();
+                    activity.Prompt();
+
                     break;
                 case "3":
                     activity = new Listing();
+                    activity.Prompt();
                     break;
                 default:
                     Console.WriteLine("Invalid choice. Exiting the program.");

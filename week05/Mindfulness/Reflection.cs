@@ -7,7 +7,7 @@ namespace Mindfulness
 
         public Reflection() : base("Reflection Activity", "This activity will help you reflect on positive aspects of your life by listing things you are grateful for.", 0) { }
 
-        protected void Prompt()
+        public void Prompt()
         {
             base.DisplayStartMessage();
             Console.WriteLine(_prompt);
