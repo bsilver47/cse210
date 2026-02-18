@@ -26,6 +26,21 @@ namespace ExerciseTracking
             return _duration;
         }
 
+        public float CalculateSpeed()
+        {
+            return (_distance / (_duration / 60f));
+        }
+
+        public float CalculatePace()
+        {
+            return (_duration / _distance);
+        }
+
+        public float CalculateDistance(float speed)
+        {
+            return (speed * (_duration / 60f));
+        }
+
         public string Summary()
         {
             return $"{_date}: {_name} for {_duration} minutes - Distance: {_distance} miles, Speed: {_speed} mph, Pace: {_pace} min/mile";

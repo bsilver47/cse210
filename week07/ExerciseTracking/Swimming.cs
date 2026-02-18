@@ -8,15 +8,5 @@ namespace ExerciseTracking
             _speed = CalculateSpeed();
             _pace = CalculatePace();
         }
-
-        public float CalculateSpeed()
-        {
-            return (_distance / (_duration / 60f));
-        }
-
-        public float CalculatePace()
-        {
-            return (_duration / _distance);
-        }
     }
 }
