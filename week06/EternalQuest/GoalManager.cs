@@ -126,7 +126,7 @@ namespace EternalQuest
                                 _goals.Add(new EternalGoal(name, description, points));
                             }
                         }
-                        catch (Exception ex)
+                        catch
                         {
                             _totalPoints += int.Parse(line);
                         }
